@@ -1,0 +1,80 @@
+<section class="py-24">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="pb-16 text-center">
+      <h2 class="text-gray-900 text-4xl font-bold leading-loose pb-2.5">Our Gallery</h2>
+      <p class="text-gray-600 text-lg leading-8">Explore the essence of beauty in our gallery's intimate space.</p>
+    </div>
+
+    <div class="mx-auto w-auto relative">
+      <!-- Navigation Buttons -->
+      <button id="slider-button-left" class="swiper-button-prev w-11 h-11 pt-3 xl:flex hidden shadow items-center justify-center border border-gray-300 rounded-lg group hover:bg-gray-900 transition">
+        <svg class="text-gray-900 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <!-- Swiper -->
+      <div class="swiper gallery-top w-full md:w-[1028px] mx-auto pt-6">
+        <div class="swiper-wrapper mb-5 flex gap-3">
+          <div *ngFor="let image of images" class="swiper-slide max-w-[319px] grid">
+            <img [src]="image.src" alt="Watch image" class="w-full rounded-xl object-cover" />
+            <div class="swiper-box mx-auto flex-col items-center text-center gap-1 mt-5">
+              <h5 class="text-gray-900 text-xl font-medium">{{ image.title }}</h5>
+              <p class="text-gray-600 text-base">{{ image.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="slider-button-right" class="swiper-button-next w-11 h-11 xl:flex hidden shadow items-center justify-center border border-gray-300 rounded-lg group hover:bg-gray-900 transition">
+        <svg class="text-gray-900 group-hover:text-white pt-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"  >
+          <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- GALLERY -->
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 pr-10 pl-10">
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+  </div>
+  <div>
+      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+  </div>
+</div>

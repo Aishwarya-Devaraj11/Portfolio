@@ -1,0 +1,9 @@
+<div class="loader-container" *ngIf="isLoading">
+    <div class="loader">
+      <div class="loader-text">_.AISHWARYA._</div>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="progress"></div>
+      </div>
+      <div class="percentage">{{ progress }}%</div>
+    </div>
+  </div>
