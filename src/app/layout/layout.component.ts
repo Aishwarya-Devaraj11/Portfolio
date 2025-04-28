@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
+import Aos from 'aos';
 
 @Component({
   selector: 'app-layout',
@@ -9,6 +10,14 @@ import { Router } from '@angular/router';
   styleUrl: './layout.component.scss'
 })
 export class LayoutComponent implements OnInit{
+
+
+
+
+
+
+
+  constructor(private route:Router){}
 
 
   ngOnInit(): void {
@@ -21,11 +30,16 @@ export class LayoutComponent implements OnInit{
         });
       });
     }
+
+    this.route.events.subscribe((event: any) => {
+      if (event instanceof NavigationEnd) {
+        Aos.refresh();  // Refresh AOS on every route change
+      }
+    });
   }
 
 
 
-  constructor(private route:Router){}
 
   navigate(){
     this.route.navigate(['output'])
@@ -62,3 +76,4 @@ export class LayoutComponent implements OnInit{
 
 
 }
+
