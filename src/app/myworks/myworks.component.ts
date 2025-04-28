@@ -16,28 +16,28 @@ export class MyworksComponent implements AfterViewInit {
   images = [
     {
       src: '../assets/ART/Art1.jpg',
-      title: 'Golden&Sliver Metal Belt Watch',
-      desc: 'a chic and understated accessory for any occasion.',
+      title: 'Slow and Steady',
+      desc: 'An artistic tribute to perseverance, portrayed through a graceful tortoise.',
     },
     {
       src: '../assets/ART/Art2.jpg',
-      title: 'Golden Metal Belt Watch',
-      desc: 'a chic and understated accessory for any occasion.',
+      title: 'Curious Encounter',
+      desc: 'A playful scene where a cat’s wide-eyed wonder meets the gentle buzz of a bee.',
     },
     {
       src: '../assets/ART/Man3.jpg',
-      title: 'Sliver Metal Belt Watch',
-      desc: 'a chic and understated accessory for any occasion.',
+      title: 'Circle of Harmony',
+      desc: 'An intricate mandala reflecting balance, beauty, and the endless rhythm of life.',
     },
     {
       src: '../assets/ART/Art8.jpg',
-      title: 'Sliver Metal Belt Watch',
-      desc: 'a chic and understated accessory for any occasion.',
+      title: 'The lock and key',
+      desc: 'In a world of millions, you are the only key that fits my hearts lock.',
     },
     {
       src: '../assets/ART/Man2.jpg',
-      title: 'Sliver Metal Belt Watch',
-      desc: 'a chic and understated accessory for any occasion.',
+      title: 'Harmony Within',
+      desc: 'A delicate balance of opposites, where light and dark, chaos and calm, dance together in perfect unity.',
     },
   ];
 
