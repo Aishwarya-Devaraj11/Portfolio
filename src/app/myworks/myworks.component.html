@@ -1,7 +1,65 @@
-<section class="py-24">
+<div class="min-h-screen bg-art bg-cover bg-center text-white font-sans relative">
+  <!-- Overlay for better text readability -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+  <div class="relative z-10">
+    <!-- Header Section -->
+    <header class="px-6 py-8">
+      <div class="flex justify-between items-center max-w-6xl mx-auto">
+        <!-- Logo -->
+        <div class="text-4xl font-bold" style="font-family: 'Arial Black', sans-serif; letter-spacing: 1px;">AISHWARYA's</div>
+
+        <!-- Navigation -->
+        <nav>
+          <ul class="flex space-x-8">
+            <li><a href="" class="text-sm uppercase tracking-widest hover:opacity-80 transition">Logout</a></li>
+            <!-- <li><a href="#" class="text-sm uppercase tracking-widest hover:opacity-80 transition">Events</a></li>
+            <li><a href="#" class="text-sm uppercase tracking-widest hover:opacity-80 transition">About Us</a></li>
+            <li><a href="#" class="text-sm uppercase tracking-widest hover:opacity-80 transition">Works of Artists</a></li>
+            <li><a href="#" class="text-sm uppercase tracking-widest hover:opacity-80 transition">Our Prices</a></li>
+          -->
+        </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="px-6">
+      <div class="text-center pt-20 pb-32 max-w-4xl mx-auto">
+        <!-- Main Heading -->
+        <h1 class="text-6xl font-extrabold  mb-6" style="letter-spacing: -1px;">ART STATION</h1>
+
+        <!-- Subheading -->
+        <p class="text-3xl font-light tracking-[0.5em] mb-20">CREATIVE FUTURE</p>
+
+        <!-- Menu Boxes -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div  (click)="scrollToTarget()" class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 p-6 hover:bg-opacity-20 transition cursor-pointer">
+            <h2 class="text-lg font-medium mb-1">Art Gallery</h2>
+            <p class="text-xs text-gray-300 uppercase tracking-wider">Explore collection</p>
+          </div>
+          <div (click)="scrollToTarget1()" class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 p-6 hover:bg-opacity-20 transition cursor-pointer">
+            <h2 class="text-lg font-medium mb-1 " >Events</h2>
+            <p class="text-xs text-gray-300 uppercase tracking-wider">Exhibitions</p>
+          </div>
+          <div (click)="scrollToTarget2()" class="bg-white bg-opacity-10 backdrop-blur-sm border border-white border-opacity-20 p-6 hover:bg-opacity-20 transition cursor-pointer">
+            <h2 class="text-lg font-medium mb-1">About Us</h2>
+            <p class="text-xs text-gray-300 uppercase tracking-wider">Our story</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+
+
+
+<!-- GALLERY -->
+<section id="next-section" class="py-24">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-hidden">
     <div class="pb-16 text-center">
-      <h2 class="text-gray-900 text-4xl font-bold leading-loose pb-2.5">Our Gallery</h2>
+      <h2 class="text-gray-900 text-4xl font-bold leading-loose pb-2.5">My Gallery</h2>
       <p class="text-gray-600 text-lg leading-8">Explore the essence of beauty in our gallery's intimate space.</p>
     </div>
 
@@ -36,11 +94,85 @@
 </section>
 
 
+<!-- <div class="w-full overflow-hidden py-6">
+  <div class="flex items-center whitespace-nowrap animate-marquee space-x-12">
+    <img src="../assets/Logo/apple.svg" class="h-8 opacity-80 hover:opacity-100 transition" />
+    <img src="../assets/Logo/artist.svg" class="h-8 opacity-80 hover:opacity-100 transition" />
+    <img src=" ../assets/Logo/github.svg" class="h-8 opacity-80 hover:opacity-100 transition" />
+    <img src="../assets/Logo/instagram.svg" class="h-8 opacity-80 hover:opacity-100 transition" />
+    <img src="../assets/Logo/youtube.svg" class="h-8 opacity-80 hover:opacity-100 transition" />
+    <img src="../assets/Logo/apple.svg" class="h-8 opacity-80 hover:opacity-100 transition" />
+
+  </div>
+</div> -->
+
+
+<!-- MARQUEE LOGOS -->
+
+<section class="overflow-hidden bg-gray-100 py-5 pb-8">
+  <div class="flex whitespace-nowrap animate-marquee space-x-12">
+
+    <!-- Apple -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+         alt="Apple" class="h-12 w-12 object-contain" />
+
+    <!-- YouTube -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+         alt="YouTube" class="h-12 w-24 object-contain" />
+
+    <!-- Instagram -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+         alt="Instagram" class="h-12 w-12 object-contain" />
+
+    <!-- WhatsApp -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp" class="h-12 w-12 object-contain" />
+
+    <!-- GitHub -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+         alt="GitHub" class="h-12 w-12 object-contain" />
+
+    <!-- Art (paint palette emoji as placeholder) -->
+    <div class="flex items-center justify-center h-12 w-12 text-4xl">
+      🎨
+    </div>
+
+    <!-- Duplicate logos to create continuous loop -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+         alt="Apple" class="h-12 w-12 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+         alt="YouTube" class="h-12 w-24 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+         alt="Instagram" class="h-12 w-12 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp" class="h-12 w-12 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+         alt="GitHub" class="h-12 w-12 object-contain" />
+    <div class="flex items-center justify-center h-12 w-12 text-4xl">
+      🎨
+    </div>
+
+    <!-- Duplicate logos to create continuous loop -->
+    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+         alt="Apple" class="h-12 w-12 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg"
+         alt="YouTube" class="h-12 w-24 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+         alt="Instagram" class="h-12 w-12 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         alt="WhatsApp" class="h-12 w-12 object-contain" />
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+         alt="GitHub" class="h-12 w-12 object-contain" />
+    <div class="flex items-center justify-center h-12 w-12 text-4xl">
+      🎨
+    </div>
+  </div>
+</section>
 
 
 <!-- GALLERY -->
-
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 pr-10 pl-10">
+<section id="next-Event">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 pr-10 pl-10 pt-14">
   <div>
       <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
   </div>
@@ -78,3 +210,80 @@
       <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
   </div>
 </div>
+</section>
+
+
+
+<!-- ABOUT-US -->
+
+<section id="next-About" class="px-6 py-16 bg-gray-50 text-gray-800">
+  <div class="max-w-5xl mx-auto">
+    <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+      Welcome to <span class="text-indigo-600">Aishwarya's Art Station</span>
+    </h1>
+
+    <p class="text-center text-lg mb-12">
+      Where imagination meets canvas, and stories unfold in colors.
+    </p>
+
+    <blockquote class="text-center italic text-gray-600 mb-16">
+      "Art enables us to find ourselves and lose ourselves at the same time." <br/>
+      <span class="block mt-2 text-sm font-semibold">— Thomas Merton</span>
+    </blockquote>
+
+    <div class="space-y-12">
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">✨ What We Believe</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Art connects souls.</li>
+          <li>Art challenges the ordinary.</li>
+          <li>Art is the silent language of the heart.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">🖼️ What You'll Discover</h2>
+        <ul class="list-disc list-inside space-y-2">
+          <li>Rotating exhibitions featuring contemporary, abstract, and fine art</li>
+          <li>Exclusive artist meet-and-greet events</li>
+          <li>A cozy art café where conversations flow as easily as coffee</li>
+          <li>An ever-evolving art shop with limited edition prints and artisan crafts</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-semibold mb-4">🎨 Our Mission</h2>
+        <p class="mb-6">
+          To ignite imaginations, nurture talents, and foster a community where art is accessible to all —
+          whether you're a seasoned collector or a first-time visitor with wide eyes and an open heart.
+        </p>
+
+        <blockquote class="italic text-gray-600">
+          "Every artist dips their brush in their own soul, and paints their own nature into their pictures." <br/>
+          <span class="block mt-2 text-sm font-semibold">— Henry Ward Beecher</span>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="mt-16 text-center">
+      <h3 class="text-3xl font-bold mb-4">🌟 Visit Us</h3>
+      <p class="text-lg">
+        Come wander. Come wonder. <br/>
+        At <span class="font-semibold text-indigo-600">Elysian Art Gallery</span>, your next masterpiece isn't just hanging on the wall — it's waiting to find you.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-8 mt-16">
+  <div class="container mx-auto text-center">
+    <p class="text-sm">© 2023 AISHWARYA. All rights reserved.</p>
+    <div class="flex justify-center space-x-4 mt-4">
+      <a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a>
+      <a href="#" class="text-gray-400 hover:text-white">Terms of Service</a>
+    </div>
+  </div>

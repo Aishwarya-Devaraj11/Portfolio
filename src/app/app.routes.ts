@@ -6,6 +6,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { OutputComponent } from './output/output.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AboutComponent } from './about/about.component';
 
 export const routes: Routes = [
     {path:"", component:LayoutComponent},
@@ -13,5 +14,6 @@ export const routes: Routes = [
     {path:"details",component:DetailsComponent},
     {path:"output",component:OutputComponent},
     {path:"myworks",component:MyworksComponent},
-    {path:"dashboard",component:DashboardComponent}
+    {path:"dashboard",component:DashboardComponent},
+    {path:"about",component:AboutComponent}
 ];

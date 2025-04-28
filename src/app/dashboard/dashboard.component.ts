@@ -41,6 +41,12 @@ export class DashboardComponent {
   circumference = 2 * Math.PI * 50;
 
 
+  scrollToTarget() {
+    const element = document.getElementById('next-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 
 
 

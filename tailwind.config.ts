@@ -7,6 +7,7 @@ const config: Config = {
   ],
   theme: {
     extend: {
+
       keyframes: {
         sparkleFloat: {
           '0%': { transform: 'translate(0, 0)', opacity: '1' },
@@ -16,6 +17,17 @@ const config: Config = {
       },
       animation: {
         sparkleFloat: 'sparkleFloat 2s ease-in-out infinite',
+        'slide-fade': 'slideFade 0.4s ease-out',
+        marquee: 'marquee 20s linear infinite',
+      },
+
+      slideFade: {
+        '0%': { opacity: '0', transform: 'translateX(20px)' },
+        '100%': { opacity: '1', transform: 'translateX(0)' },
+      },
+      marquee: {
+        '0%': { transform: 'translateX(0)' },
+        '100%': { transform: 'translateX(-50%)' },
       },
     },
   },

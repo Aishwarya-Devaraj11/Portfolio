@@ -1,0 +1,233 @@
+<figure class="ms-auto me-20 relative z-1 max-w-full w-full h-auto  shadow-[0_2.75rem_3.5rem_-2rem_rgb(45_55_75_/_20%),_0_0_5rem_-2rem_rgb(45_55_75_/_15%)] dark:shadow-[0_2.75rem_3.5rem_-2rem_rgb(0_0_0_/_20%),_0_0_5rem_-2rem_rgb(0_0_0_/_15%)] rounded-b-lg">
+  <div class="relative flex items-center max-w-full bg-gray-800 rounded-t-lg py-2 px-24 dark:bg-neutral-700">
+    <div class="flex gap-x-1 absolute top-2/4 start-4 -translate-y-1">
+      <span class="size-2 bg-red-500 rounded-full dark:bg-neutral-600"></span>
+      <span class="size-2 bg-yellow-300 rounded-full dark:bg-neutral-600"></span>
+      <span class="size-2 bg-green-400 rounded-full dark:bg-neutral-600"></span>
+    </div>
+    <div class="flex justify-center items-center size-full bg-gray-700 text-[.25rem] text-gray-400 rounded-sm sm:text-[.5rem] dark:bg-neutral-600 dark:text-neutral-400">www.Aishwarya.com</div>
+  </div>
+
+  <div class="bg-gray-300 rounded-b-lg">
+
+
+    <!-- QUOTE -->
+    <div class=" flex justify-Start  pt-10 ">
+      <blockquote class="relative border-s-4 border-gray-200 ps-4 sm:ps-6 dark:border-neutral-700 ">
+        <p class="text-gray-800 font-semibold sm:text-xl dark:text-white"><em>
+            I will not win immediately, but definitely... ❤️
+          </em></p>
+
+        <footer class="mt-4">
+          <div class="flex items-center">
+            <div class="shrink-0">
+              <img class="size-10 rounded-full" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80" alt="Avatar">
+            </div>
+            <div class="ms-4">
+              <div class="text-base font-semibold text-gray-800 dark:text-neutral-400">Aishwarya_Devaraj</div>
+              <div class="text-xs text-gray-500 dark:text-neutral-500">Source title</div>
+            </div>
+          </div>
+        </footer>
+      </blockquote>
+      </div>
+
+
+<!-- Trigger Card -->
+<div
+class="relative flex h-64 w-96 cursor-pointer flex-col overflow-hidden rounded-full bg-grey-300 shadow-sm transition-opacity hover:opacity-90 pl-10 pt-10 "
+(click)="openModal()"
+>
+<img
+  alt="nature"
+  class="h-full w-full object-cover object-center"
+  src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
+/>
+</div>
+
+
+<!-- Modal Backdrop & Content -->
+<div
+*ngIf="showModal"
+class="fixed inset-0 z-[999] grid h-screen w-screen place-items-center bg-black bg-opacity-60 backdrop-blur-sm"
+>
+<div class="relative m-4 w-2/4 rounded-lg bg-white shadow-sm" role="dialog">
+  <!-- Modal Header -->
+  <div class="flex items-center justify-between p-4">
+    <div class="flex items-center gap-3">
+      <img
+        alt="Aishwarya Devaraj"
+        src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=1300&q=80"
+        class="h-9 w-9 rounded-full object-cover"
+      />
+      <div class="flex flex-col -mt-px">
+        <p class="text-sm text-slate-800 font-medium">Aishwarya Devaraj</p>
+        <p class="text-xs text-slate-500">&#64;Aishwarya</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button
+        class="p-2.5 text-slate-600 hover:bg-slate-100 rounded-md"
+        (click)="closeModal()"
+      >
+        <!-- Close Icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+        </svg>
+      </button>
+      <!-- <button class="bg-slate-800 text-white px-4 py-2 rounded-md hover:bg-slate-700">
+        Free Download
+      </button> -->
+    </div>
+  </div>
+
+  <!-- Modal Image -->
+  <div class="border-y border-gray-200 p-0">
+    <img
+      alt="nature"
+      class="h-[30rem] w-full object-cover object-center"
+      src="https://images.unsplash.com/photo-1485470733090-0aae1788d5af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2717&q=80"
+    />
+  </div>
+
+  <!-- Modal Footer -->
+  <div class="flex items-center justify-between p-4 text-slate-500">
+    <div class="flex gap-16">
+      <div>
+        <p class="text-sm">Views</p>
+        <p class="font-medium text-slate-800">44,082,044</p>
+      </div>
+      <div>
+        <p class="text-sm">Downloads</p>
+        <p class="font-medium text-slate-800">553,031</p>
+      </div>
+    </div>
+    <button
+      class="flex items-center border border-slate-300 px-4 py-2 rounded-md text-sm text-slate-600 hover:bg-slate-800 hover:text-white transition-all"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1.5" fill="currentColor" viewBox="0 0 24 24">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M15.75 4.5a3 3 0 11.825 2.066l-8.421 4.679a3.002 3.002 0 010 1.51l8.421 4.679a3 3 0 11-.729 1.31l-8.421-4.678a3 3 0 110-4.132l8.421-4.679a3 3 0 01-.096-.755z"
+        />
+      </svg>
+      Share
+    </button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<!-- EDUCATION -->
+<div class="w-full max-w-4xl mx-auto mt-12">
+<!-- Tabs Navigation -->
+<div class="flex justify-center mb-6">
+  <ul class="flex space-x-2 bg-slate-100 p-1 rounded-full shadow">
+    <li *ngFor="let tab of ['Schooling', 'College', 'Masters']">
+      <button
+        class="px-5 py-2 text-sm font-semibold rounded-full transition-all duration-300"
+        [ngClass]="{
+          'bg-white text-slate-800 shadow-md': activeTab === tab,
+          'text-slate-500 hover:bg-white hover:text-slate-800': activeTab !== tab
+        }"
+        (click)="setActive(tab)"
+      >
+        {{ tab | titlecase }}
+      </button>
+    </li>
+  </ul>
+</div>
+
+<!-- Content Area -->
+<div class="relative bg-white rounded-xl shadow-lg p-6 min-h-[160px] overflow-hidden">
+  <div
+    *ngIf="activeTab === 'Schooling'"
+    class="animate-slide-fade transition-opacity"
+  >
+    <h2 class="text-xl font-bold text-slate-800 mb-2">Schooling</h2>
+    <!-- <p class="text-slate-500">
+      Because it’s about motivating the doers. I’m here to follow my dreams and inspire others.
+    </p> -->
+    <!-- Created By Joker Banny -->
+<div class="flex h-screen items-center justify-center bg-white px-6 md:px-60">
+<div class="space-y-6 border-l-2 border-dashed">
+  <div class="relative w-full">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500">
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+    </svg>
+    <div class="ml-6">
+      <h4 class="font-bold text-blue-500">Frontend Development.</h4>
+      <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Maecenas finibus nec sem ut imperdiet. Ut tincidunt est ac dolor aliquam sodales. Phasellus sed mauris hendrerit, laoreet sem in, lobortis ante.</p>
+      <span class="mt-1 block text-sm font-semibold text-blue-500">2007</span>
+    </div>
+  </div>
+  <div class="relative w-full">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500">
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+    </svg>
+    <div class="ml-6">
+      <h4 class="font-bold text-blue-500">Graphic Design.</h4>
+      <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor.</p>
+      <span class="mt-1 block text-sm font-semibold text-blue-500">2007</span>
+    </div>
+  </div>
+  <div class="relative w-full">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500">
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+    </svg>
+    <div class="ml-6">
+      <h4 class="font-bold text-blue-500">Lead Ui/Ux Designer.</h4>
+      <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor</p>
+      <span class="mt-1 block text-sm font-semibold text-blue-500">2007</span>
+    </div>
+  </div>
+  <div class="relative w-full">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="absolute -top-0.5 z-10 -ml-3.5 h-7 w-7 rounded-full text-blue-500">
+      <path fill-rule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12zm13.36-1.814a.75.75 0 10-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 00-1.06 1.06l2.25 2.25a.75.75 0 001.14-.094l3.75-5.25z" clip-rule="evenodd" />
+    </svg>
+    <div class="ml-6">
+      <h4 class="font-bold text-blue-500">Lead Ui/Ux Designer.</h4>
+      <p class="mt-2 max-w-screen-sm text-sm text-gray-500">Aliquam tincidunt malesuada tortor vitae iaculis. In eu turpis iaculis, feugiat risus quis, aliquet urna. Quisque fringilla mollis risus, eu pulvinar dolor</p>
+      <span class="mt-1 block text-sm font-semibold text-blue-500">2007</span>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+
+  <div
+    *ngIf="activeTab === 'College'"
+    class="animate-slide-fade transition-opacity"
+  >
+    <h2 class="text-xl font-bold text-slate-800 mb-2">College</h2>
+    <p class="text-slate-500">
+      The reading of all good books is like a conversation with the finest minds of past centuries.
+    </p>
+  </div>
+
+  <div
+    *ngIf="activeTab === 'Masters'"
+    class="animate-slide-fade transition-opacity"
+  >
+    <h2 class="text-xl font-bold text-slate-800 mb-2">Masters</h2>
+    <p class="text-slate-500">
+      Comparing yourself to others is the thief of joy.
+    </p>
+  </div>
+</div>
+</div>
+
+  </div>
+
+
+
+
+
+
+</figure>
+
+

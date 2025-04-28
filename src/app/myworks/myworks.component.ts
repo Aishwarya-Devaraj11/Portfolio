@@ -15,27 +15,27 @@ Swiper.use([Navigation, Autoplay]);
 export class MyworksComponent implements AfterViewInit {
   images = [
     {
-      src: 'https://pagedone.io/asset/uploads/1712568734.png',
+      src: '../assets/ART/Art1.jpg',
       title: 'Golden&Sliver Metal Belt Watch',
       desc: 'a chic and understated accessory for any occasion.',
     },
     {
-      src: 'https://pagedone.io/asset/uploads/1712569721.png',
+      src: '../assets/ART/Art2.jpg',
       title: 'Golden Metal Belt Watch',
       desc: 'a chic and understated accessory for any occasion.',
     },
     {
-      src: 'https://pagedone.io/asset/uploads/1712568744.png',
+      src: '../assets/ART/Man3.jpg',
       title: 'Sliver Metal Belt Watch',
       desc: 'a chic and understated accessory for any occasion.',
     },
     {
-      src: 'https://pagedone.io/asset/uploads/1712568744.png',
+      src: '../assets/ART/Art8.jpg',
       title: 'Sliver Metal Belt Watch',
       desc: 'a chic and understated accessory for any occasion.',
     },
     {
-      src: 'https://pagedone.io/asset/uploads/1712568744.png',
+      src: '../assets/ART/Man2.jpg',
       title: 'Sliver Metal Belt Watch',
       desc: 'a chic and understated accessory for any occasion.',
     },
@@ -66,4 +66,34 @@ export class MyworksComponent implements AfterViewInit {
       });
     }
   }
+
+
+
+
+  scrollToTarget() {
+    const element = document.getElementById('next-section');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
+
+  scrollToTarget1() {
+    const element = document.getElementById('next-Event');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
+  scrollToTarget2() {
+    const element = document.getElementById('next-About');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+
+
 }

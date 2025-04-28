@@ -117,9 +117,9 @@
 
       <!-- AUTHOR CARD -->
       <div class="-mt-20">
-        <div class="h-screen w-full flex items-center justify-center dark:bg-gray-900 pr-96">
+        <div class="h-screen w-full flex items-center justify-center dark:bg-gray-900 pr-96 pb-28">
 
-         <!-- Author card -->
+         <!-- Author card
          <div
              class="relative w-full max-w-2xl my-8 md:my-16 flex flex-col items-start space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6 px-4 py-8 border-2 border-dashed border-gray-400 dark:border-gray-400 shadow-lg rounded-lg">
 
@@ -165,18 +165,59 @@
                  </div>
              </div>
 
-         </div>
+         </div> -->
+         <article
+    class="bg-white rounded-xl shadow-md p-6 relative overflow-hidden transition-transform duration-500 hover:scale-[1.02] animate-fade-in">
+    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-pink-500 animate-gradient-move"></div>
+
+    <div class="flex items-center space-x-3 mb-3">
+      <img src="assets/profile.jpg" alt="Profile Photo" class="w-12 h-12 rounded-full shadow border-2 border-indigo-500">
+      <div>
+        <h1 class="text-xl font-bold text-gray-800">Hi, I'm <span class="text-indigo-600">AISHWARYA</span></h1>
+        <p class="text-xs text-gray-500"> Developer | UI/UX Enthusiast</p>
+      </div>
+    </div>
+
+    <p class="text-gray-700 text-sm leading-relaxed mb-4">
+      I build clean and engaging web apps from idea to deployment, blending functionality with delightful design.
+    </p>
+
+    <button
+      class="bg-indigo-600 text-white text-sm font-semibold px-4 py-1.5 rounded-full shadow hover:bg-indigo-700 transition-colors">
+      View Portfolio
+    </button>
+  </article>
+
+
+<div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+  <div class="flex flex-col items-center space-y-2 cursor-pointer" (click)="scrollToTarget()">
+    <div class="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 animate-pulse shadow-lg">
+      <svg
+        class="w-6 h-6 text-white animate-bounce-slow"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+    <span class="text-sm text-gray-400 animate-fade-in-up">Scroll down</span>
+  </div>
+</div>
+
 
      </div>
+
      </div>
 
 
     <!-- MOCKUP DEVICE -->
-     <div class="pl-40 -mt-96 ">
+     <div class="pl-40 -mt-96 pb-5 ">
       <div class="pl-96 -mt-56">
     <div class="flex items-center justify-end pl-96 ">
       <!-- Smaller iPhone 15 Container -->
-      <div class="relative w-48 h-[420px] rounded-[35px] shadow-[0_0_2px_2px_rgba(255,255,255,0.1)] border-8 border-zinc-900">
+      <div class="relative w-48 h-[390px] rounded-[35px] shadow-[0_0_2px_2px_rgba(255,255,255,0.1)] border-8 border-zinc-900">
 
         <!-- Dynamic Island -->
         <div class="absolute top-2 left-1/2 transform -translate-x-1/2 w-[60px] h-[16px] bg-zinc-900 rounded-full z-20"></div>
@@ -204,16 +245,27 @@
   </div>
 </div>
 
+ <!-- Glowing Circle with Arrow -->
+ <!-- <div class="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 animate-pulse shadow-lg ">
+  <svg
+    class="w-6 h-6 text-white animate-bounce-slow"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    viewBox="0 0 24 24"
+  >
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+</div> -->
 
 
 
 
-
-
+<section id="next-section" class="min-h-screen bg-gray-100 p-8">
 <!-- Skills Section -->
-<section class="w-full px-4 py-10 bg-gray-50">
+<section class="w-full px-4 py-10 pb-5 bg-gray-50">
   <div class="max-w-7xl mx-auto">
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-20">
       ✧ My Skill Progress ✧
     </h2>
 
@@ -396,14 +448,4 @@
   </div>
 
 
-</div>
-
-
-  </main>
-
-
-
-
-
-</div>
 
