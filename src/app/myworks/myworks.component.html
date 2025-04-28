@@ -171,10 +171,10 @@
 
 
 <!-- GALLERY -->
-<section id="next-Event">
+<!-- <section id="next-Event">
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pr-10 pl-10 pt-14">
   <div>
-      <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
+      <img class="h-auto max-w-full rounded-lg" src="../assets/ART/Art3.1.jpg" alt="">
   </div>
   <div>
       <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
@@ -210,7 +210,99 @@
       <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
   </div>
 </div>
+</section> -->
+
+
+
+<!-- <div class="min-h-screen bg-gray-100 flex items-center justify-center p-8">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl">
+    <div *ngFor="let img of images1" class="bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center">
+      <img [src]="img" alt="Gallery image" class="object-cover w-full h-48" />
+    </div>
+  </div>
+</div> -->
+
+ <!-- Gallery Grid -->
+<!-- <div class="min-h-screen bg-gray-100 flex items-center justify-center p-8">
+
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl">
+    <div *ngFor="let img of images1" class="bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center cursor-pointer" (click)="openModal(img)">
+      <img [src]="img" alt="Gallery image" class="object-cover w-full h-48" />
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal for Full Image View -->
+<!-- <div *ngIf="selectedImage" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white p-8 rounded-2xl shadow-2xl max-w-4xl w-full transform transition-all duration-300">
+    <div class="relative">
+
+      <button (click)="closeModal()" class="absolute top-4 right-4 text-white bg-gray-800 rounded-full p-3 hover:bg-gray-600 transition-colors">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button> -->
+      <!-- Image in Modal --
+      <div class="flex justify-center">
+        <img [src]="selectedImage" alt="Full view" class="w-auto h-auto max-h-[80vh] rounded-lg shadow-lg" />
+      </div>
+    </div>
+  </div>
+</div>-->
+
+
+
+<!-- GALLERY -->
+<section id="next-Event">
+  <div class="min-h-screen bg-gray-100 flex items-center justify-center p-8">
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-6xl">
+      <div *ngFor="let img of images2" class="bg-white rounded-xl shadow-lg overflow-hidden flex items-center justify-center cursor-pointer" (click)="openModal(img)">
+        <img [src]="img.src" alt="Gallery image" class="object-cover w-full h-48" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Full Image View -->
+  <div *ngIf="selectedImage" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white p-6 rounded-xl shadow-lg max-w-2xl w-full transform transition-all duration-300">
+      <div class="relative">
+        <!-- Close Button -->
+        <button (click)="closeModal()" class="absolute top-4 right-4 text-white bg-gray-800 rounded-full p-3 hover:bg-gray-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
+        <!-- Modal Content -->
+        <div class="flex justify-center mb-6">
+          <!-- Image in Modal -->
+          <img [src]="selectedImage.src" alt="Full view"
+            [ngClass]="{'scale-125': isZoomedIn, 'transition-transform duration-300': true}"
+            class="w-auto h-auto max-h-[60vh] rounded-lg shadow-md" />
+        </div>
+
+        <!-- Title, Description, and Artist Info -->
+        <div class="text-center space-y-4">
+          <!-- Title -->
+          <h2 class="text-2xl font-semibold text-indigo-600 mb-2">{{ selectedImage.title }}</h2>
+          <!-- Description -->
+          <p class="text-md text-gray-700">{{ selectedImage.description }}</p>
+          <!-- Artist Info -->
+          <p class="text-sm text-gray-500">Art by: <span class="text-yellow-500 font-bold">{{ selectedImage.artist }}</span></p>
+        </div>
+
+        <!-- Zoom Button -->
+        <div class="flex justify-center mt-4">
+          <button (click)="toggleZoom()" class="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
+            {{ isZoomedIn ? 'Zoom Out' : 'Zoom In' }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
+
 
 
 
