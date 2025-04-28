@@ -41,6 +41,64 @@ export class MyworksComponent implements AfterViewInit {
     },
   ];
 
+
+
+  // Array of images with additional details
+ images2 = [
+  {
+    src: '../assets/ART/Art3.jpg',
+    title: 'The Sunset Bliss',
+    description: 'A mesmerizing view of the sunset over the ocean.',
+    artist: 'Aishwarya',
+  },
+  {
+    src: '../assets/ART/Art4.jpg',
+    title: 'Mountain Majesty',
+    description: 'The towering peaks of the mountains covered in snow.',
+    artist: 'Alex Johnson',
+  },
+  {
+    src: '../assets/ART/Art5.jpg',
+    title: 'City Lights',
+    description: 'The glowing lights of a bustling city at night.',
+    artist: 'Jane Smith',
+  },
+  {
+    src: '../assets/ART/Art6.jpg',
+    title: 'Mountain Majesty',
+    description: 'The towering peaks of the mountains covered in snow.',
+    artist: 'Alex Johnson',
+  },
+  {
+    src: '../assets/ART/Art7.jpg',
+    title: 'Mountain Majesty',
+    description: 'The towering peaks of the mountains covered in snow.',
+    artist: 'Alex Johnson',
+  },
+  {
+    src: '../assets/ART/Man1.jpg',
+    title: 'Mountain Majesty',
+    description: 'The towering peaks of the mountains covered in snow.',
+    artist: 'Alex Johnson',
+  },
+  {
+    src: '../assets/ART/Art9.jpg',
+    title: 'Mountain Majesty',
+    description: 'The towering peaks of the mountains covered in snow.',
+    artist: 'Alex Johnson',
+  },
+  {
+    src: '../assets/ART/Art10.jpg',
+    title: 'Mountain Majesty',
+    description: 'The towering peaks of the mountains covered in snow.',
+    artist: 'Alex Johnson',
+  },
+  // Add more images as needed
+];
+
+
+
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
@@ -93,6 +151,60 @@ export class MyworksComponent implements AfterViewInit {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+
+  //  // Track clicked image and modal state
+  //  selectedImage: string | null = null;
+
+  //  // Open the modal with the clicked image
+  //  openModal(image: string): void {
+  //    this.selectedImage = image;
+  //  }
+
+  //  // Close the modal
+  //  closeModal(): void {
+  //    this.selectedImage = null;
+  //  }
+
+
+
+
+
+// // Track clicked image and modal state
+// selectedImage: any = null;
+
+// // Open the modal with the clicked image
+// openModal(image: any): void {
+//   this.selectedImage = image;
+// }
+
+// // Close the modal
+// closeModal(): void {
+//   this.selectedImage = null;
+// }
+
+// Track clicked image and modal state
+selectedImage: any = null;
+isZoomedIn = false;  // State for zooming image
+
+// Open the modal with the clicked image
+openModal(image: any): void {
+  this.selectedImage = image;
+  this.isZoomedIn = false; // Reset zoom state when opening new image
+}
+
+// Close the modal
+closeModal(): void {
+  this.selectedImage = null;
+  this.isZoomedIn = false; // Reset zoom state on close
+}
+
+// Toggle zoom state
+toggleZoom(): void {
+  this.isZoomedIn = !this.isZoomedIn;
+}
+
+
 
 
 
