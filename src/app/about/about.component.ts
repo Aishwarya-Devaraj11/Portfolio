@@ -21,7 +21,7 @@ export class AboutComponent {
     this.showModal = false;
   }
 
-  activeTab: string = 'Schooling';
+  activeTab: string = 'ABSTRACT';
 
   setActive(tab: string) {
     this.activeTab = tab;
