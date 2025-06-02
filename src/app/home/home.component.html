@@ -2,7 +2,8 @@
 
 
 <!-- ARTICLE -->
-<div class="pl-5 pt-32 absolute">
+ <div class="pl-10">
+<div class="pl-5 pt-24 absolute">
   <div class="card">
     <div class="main-content">
       <div class="header">
@@ -23,6 +24,7 @@
      AISHWARYA D
     </div>
   </div>
+</div>
 </div>
 
 <!-- TITLE -->
@@ -125,119 +127,49 @@
 </div>
 
 
-<!-- IMAGE SLIDE  -->
-<div class="s flex justify-end pr-28 mr-56">
-  <div id="controls-carousel" class="relative w-6/12" data-carousel="static">
-    <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-      <!-- Item 1 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/images/setup.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..."
-        />
-      </div>
-      <!-- Item 2 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-        <img
-          src="assets/images/node mcu.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..."
-        />
-      </div>
-      <!-- Item 3 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/images/noise consumer.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..."
-        />
-      </div>
-      <!-- Item 4 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/images/charging unit.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..."
-        />
-      </div>
-      <!-- Item 5 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/images/power supply.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..."
-        />
-      </div>
-      <!-- Item 6 -->
-      <div class="hidden duration-700 ease-in-out" data-carousel-item>
-        <img
-          src="assets/images/Battery.jpg"
-          class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-          alt="..."
-        />
-      </div>
+
+<br />
+<br />
+
+
+<!-- FOR SLIDDING PICS OF COMPONENTS -->
+<section id="next-section" class="py-16">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 overflow-hidden">
+    <div class="pb-16 text-center">
+      <h2 class="text-gray-900 text-4xl font-bold leading-loose pb-2.5">Components Used</h2>
+      <p class="text-gray-600 text-lg leading-8">Explore the essence of Components in our gallery's intimate space.</p>
     </div>
-    <!-- Slider controls -->
-    <button
-      type="button"
-      class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-prev
-    >
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-      >
-        <svg
-          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M5 1 1 5l4 4"
-          />
+
+
+    <div class="mx-auto w-auto relative">
+      <!-- Navigation Buttons -->
+      <button id="slider-button-left" class="swiper-button-prev w-11 h-11  xl:flex hidden shadow items-center justify-center border border-gray-300 rounded-lg group hover:bg-gray-900 transition">
+        <svg class="text-gray-900 group-hover:text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="sr-only">Previous</span>
-      </span>
-    </button>
-    <button
-      type="button"
-      class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-      data-carousel-next
-    >
-      <span
-        class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-      >
-        <svg
-          class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="m1 9 4-4-4-4"
-          />
+      </button>
+
+      <!-- Swiper -->
+      <div class="swiper gallery-top w-full md:w-[1028px] mx-auto pt-6">
+        <div class="swiper-wrapper mb-5 flex gap-3">
+          <div *ngFor="let image of images" class="swiper-slide max-w-[319px] grid">
+            <img [src]="image.src" alt="Watch image" class="w-full rounded-xl object-cover" />
+            <div class="swiper-box mx-auto flex-col items-center text-center gap-1 mt-5">
+              <h5 class="text-gray-900 text-xl font-medium">{{ image.title }}</h5>
+              <p class="text-gray-600 text-base">{{ image.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="slider-button-right" class="swiper-button-next w-11 h-11 xl:flex hidden shadow items-center justify-center border border-gray-300 rounded-lg group hover:bg-gray-900 transition">
+        <svg class="text-gray-900 group-hover:text-white pt-3" xmlns="http://www.w3.org/2000/svg" width="20" height="20"  >
+          <path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="sr-only">Next</span>
-      </span>
-    </button>
+      </button>
+    </div>
   </div>
-</div>
-
-<br />
-<br />
-
+</section>
 
 
 <div class="pl-4">
@@ -287,8 +219,11 @@
   </div>
 </div>
 
+
 <BR />
 <BR />
+
+
 <div class="">
   <h1
     class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl flex justify-center"
@@ -919,9 +854,9 @@
   </div>
 </section> -->
 <!-- ====== Team Section End -->
-<Br>
-<Br>
 
+<Br>
+<Br>
 
 <!-- <Div>
 
@@ -954,7 +889,6 @@
  -->
 
 
-
  <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white" data-inactive-classes="text-gray-500 dark:text-gray-400" class="pl-10 pr-36">
   <h2 id="accordion-flush-heading-1">
     <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3" data-accordion-target="#accordion-flush-body-1" aria-expanded="true" aria-controls="accordion-flush-body-1">
@@ -966,8 +900,10 @@
   </h2>
   <div id="accordion-flush-body-1" class="hidden" aria-labelledby="accordion-flush-heading-1">
     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons, dropdowns, modals, navbars, and more.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Angular is a popular open-source front-end web framework developed by Google. It is used for building dynamic, single-page web applications (SPAs) using HTML, CSS, and TypeScript.
+
+</p>
+      <!-- <p class="text-gray-500 dark:text-gray-400">Check out this guide to learn how to <a href="/docs/getting-started/introduction/" class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start developing websites even faster with components on top of Tailwind CSS.</p> -->
     </div>
   </div>
   <h2 id="accordion-flush-heading-2">
@@ -980,9 +916,13 @@
   </h2>
   <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Flowbite is first conceptualized and designed using the Figma software so everything you see in the library has a design equivalent in our Figma file.</p>
-      <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Tailwind CSS is a utility-first CSS framework that lets you design responsive, modern UIs directly in your HTML using prebuilt classes like p-4, bg-blue-500, or rounded. It’s highly customizable, fast, and avoids writing custom CSS by combining small, reusable utility classes.</p>
+      <!-- <p class="text-gray-500 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a> based on the utility classes from Tailwind CSS and components from Flowbite.</p> -->
     </div>
+     <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
+        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
+        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
+      </ul>
   </div>
   <h2 id="accordion-flush-heading-3">
     <button type="button" class="flex items-center justify-between w-full py-5 font-medium rtl:text-right text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3" data-accordion-target="#accordion-flush-body-3" aria-expanded="false" aria-controls="accordion-flush-body-3">
@@ -994,13 +934,10 @@
   </h2>
   <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
     <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-      <p class="mb-2 text-gray-500 dark:text-gray-400">The main difference is that the core components from Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI offers sections of pages.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
-      <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p>
-      <ul class="ps-5 text-gray-500 list-disc dark:text-gray-400">
-        <li><a href="https://flowbite.com/pro/" class="text-blue-600 dark:text-blue-500 hover:underline">Flowbite Pro</a></li>
-        <li><a href="https://tailwindui.com/" rel="nofollow" class="text-blue-600 dark:text-blue-500 hover:underline">Tailwind UI</a></li>
-      </ul>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">TypeScript is a superset of JavaScript that adds static typing to the language, helping developers catch errors early during development. It compiles down to plain JavaScript, making it compatible with all browsers and JavaScript environments.</p>
+      <!-- <p class="mb-2 text-gray-500 dark:text-gray-400">However, we actually recommend using both Flowbite, Flowbite Pro, and even Tailwind UI as there is no technical reason stopping you from using the best of two worlds.</p>
+      <p class="mb-2 text-gray-500 dark:text-gray-400">Learn more about these technologies:</p> -->
+
     </div>
   </div>
 </div>
